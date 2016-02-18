@@ -32,18 +32,24 @@
                         <form class="form-inline" id="login-form" method="post">
                             <input type="hidden" name="grant_type" value="password"/>
                             <div class="form-group">
-                                <a href="/register" class="btn btn-success">Create a New Account</a> OR
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="usernameInput" name="username" placeholder="email"/>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="usernameInput">Email:</label>
-                                <input type="text" class="form-control" id="usernameInput" name="username"/>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control" id="passwordInput" name="password" placeholder="password"/>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="passwordInput">Password:</label>
-                                <input type="password" class="form-control" id="passwordInput" name="password"/>
+                                <button type="submit" class="btn btn-success">Login</button>
                             </div>
-                            <button type="submit" class="btn btn-success">Login</button>
                         </form>
+                        OR
+                        <p/>
+                        <a href="/register" class="btn btn-primary">Create a New Account</a>
+
+                        <p/>
                         <p class="bg-danger dn" id="login-error">Invalid email or password</p>
                     </div>
 
