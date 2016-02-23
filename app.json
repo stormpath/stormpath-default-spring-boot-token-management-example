@@ -1,0 +1,21 @@
+{
+  "name": "Stormpath Spring Boot OAuth2",
+  "description": "Demonstrates the awesome power of the /oauth/token endpoint provided by Stormpath out-of-the-box",
+  "repository": "https://github.com/stormpath/stormpath-default-spring-boot-token-management-example",
+  "keywords": ["spring boot", "oauth", "oauth2", "identity", "security", "authentication"],
+  "success_url": "/",
+  "env": {
+    "STORMPATH_API_KEY_ID": {
+      "description": "The API key ID from your ~/.stormpath/apiKey.properties file",
+      "value": "changeme"
+    },
+    "STORMPATH_API_KEY_SECRET": {
+      "description": "The API key secret from your ~/.stormpath/apiKey.properties file",
+      "value": "changeme"
+    },
+    "STORMPATH_APPLICATION_HREF": {
+      "description": "The URL for your Stormpath Application from the Stormpath Admin Dashboard",
+      "value": "changeme"
+    }
+  }
+}
