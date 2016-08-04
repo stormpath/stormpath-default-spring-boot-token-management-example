@@ -89,7 +89,6 @@ $(function () {
         $.ajax({
             type: 'get',
             url: '/restricted',
-            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); },
             success: function (data) {
                 var newRowContent = '<tr><td>' + data.fullName + '</td><td>' + data.email + '</td></tr>';
                 $('#account-info-table tbody').append(newRowContent);
@@ -127,9 +126,8 @@ $(function () {
     $('#revoke').click(function () {
 
         $.ajax({
-            type: 'get',
+            type: 'post',
             url: '/logout',
-            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); },
             success: function () {
                 showOnlyDiv('revoke-div');
             }
@@ -142,7 +140,6 @@ $(function () {
         $.ajax({
             type: 'get',
             url: '/restricted',
-            beforeSend: function (xhr) { xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken); },
             success: function (data) {
                 // shouldn't get here
             },
