@@ -152,8 +152,8 @@ $(function () {
     });
 
     // Step 7 - start over
-    $('#start-over').click(function () {
-
-        showOnlyDiv('login-form-div');
+    $('.start-over').click(function () {
+        
+        document.location.href = '/';
     })
 })
